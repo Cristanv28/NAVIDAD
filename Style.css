@@ -1,0 +1,122 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(120deg, #1e3c72, #2a5298);
+    font-family: Arial, sans-serif;
+}
+
+.mainSVG {
+    width: 80%;
+    height: auto;
+}
+
+.particle {
+    fill: url(#grad);
+    stroke: #fff;
+    stroke-width: 0.2;
+    transition: transform 0.3s ease, fill 0.3s ease;
+}
+
+.particle:hover {
+    transform: scale(1.5);
+    fill: yellow;
+}
+
+.treePathMask {
+    stroke: #079478;
+    stroke-dasharray: 8;
+    animation: dash 2s linear infinite;
+}
+
+.treeBottomMask, .treePotMask {
+    stroke: #00ff37;
+    animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes dash {
+    to {
+        stroke-dashoffset: -16;
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        stroke-width: 8;
+    }
+    50% {
+        stroke-width: 12;
+    }
+}
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(120deg, #0f2027, #203a43, #2c5364);
+    font-family: Arial, sans-serif;
+    color: #99d0fd;
+    text-align: center;
+}
+
+.mainSVG {
+    width: 80%;
+    height: auto;
+    cursor: pointer;
+}
+
+.text-container {
+    margin-top: 20px;
+}
+
+.text-container h1 {
+    font-size: 2rem;
+    color: #00ff00;
+    margin: 0;
+}
+
+.text-container p {
+    font-size: 1.2rem;
+    color: #ff0000;
+}
+
+.card {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    color: #000;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    text-align: center;
+    z-index: 1000;
+}
+
+.card p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.card button {
+    background: #ff0000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.card button:hover {
+    background: #cc0000;
+}
